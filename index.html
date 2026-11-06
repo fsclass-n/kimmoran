@@ -3,27 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="박미금 - Full Stack Developer 포트폴리오. 웹 서비스 개발·배포, Python 데이터 분석과 AI 활용 경험을 소개합니다.">
-    <meta name="keywords" content="풀스택 개발자, Java, Spring, React, RPA, AI, 포트폴리오">
-    <meta name="author" content="박미금">
-    <meta name="theme-color" content="#6C5CE7">
-    <title>박미금 | Full Stack & AI Developer Portfolio</title>
-    <link rel="canonical" href="https://parkmigeum.netlify.app/">
+    <meta name="description" content="김모란 - 전자공학 기반 Full Stack & AI Developer 포트폴리오. Spring Boot·FastAPI·React 서비스 4건 실배포, RPA·데이터 분석·AI 추천 경험을 소개합니다.">
+    <meta name="keywords" content="김모란, 풀스택 개발자, 신입 개발자, 전자공학, Java, Spring Boot, FastAPI, React, Python, RPA, AI, 포트폴리오">
+    <meta name="author" content="김모란">
+    <meta name="theme-color" content="#07090D">
+    <meta name="color-scheme" content="dark">
+    <title>김모란 | Full Stack & AI Developer Portfolio</title>
+    <link rel="canonical" href="https://kimmoran.netlify.app/">
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <link rel="manifest" href="site.webmanifest">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="ko_KR">
-    <meta property="og:title" content="박미금 | Full Stack & AI Developer Portfolio">
-    <meta property="og:description" content="기술을 배우는 데 그치지 않고, 아이디어를 실제 서비스로 구현합니다.">
-    <meta property="og:url" content="https://parkmigeum.netlify.app/">
-    <meta property="og:image" content="https://parkmigeum.netlify.app/images/portfolio.webp">
-    <meta property="og:image:alt" content="박미금 개인 포트폴리오 첫 화면">
+    <meta property="og:title" content="김모란 | Full Stack & AI Developer Portfolio">
+    <meta property="og:description" content="회로부터 클라우드까지, 끝까지 동작하는 서비스를 만드는 개발자 김모란입니다.">
+    <meta property="og:url" content="https://kimmoran.netlify.app/">
+    <meta property="og:image" content="https://kimmoran.netlify.app/images/portfolio.png">
+    <meta property="og:image:alt" content="김모란 개인 포트폴리오 첫 화면">
     <meta name="twitter:card" content="summary_large_image">
 
-    <!-- Google Fonts -->
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -33,175 +36,227 @@
 <body>
     <a href="#main" class="skip-link">본문으로 건너뛰기</a>
     <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+    <div class="bg-grid" aria-hidden="true"></div>
+
     <!-- Navigation -->
-    <nav id="navbar" class="navbar" aria-label="주요 메뉴">
-        <div class="nav-container">
-            <a href="#hero" class="nav-logo">
-                <span class="logo-bracket">&lt;</span>PM<span class="logo-bracket">/&gt;</span>
+    <header id="navbar" class="navbar">
+        <nav class="nav-container" aria-label="주요 메뉴">
+            <a href="#hero" class="nav-logo" aria-label="김모란 홈으로">
+                <span class="logo-bracket">&lt;</span>KM<span class="logo-bracket">/&gt;</span>
             </a>
             <ul class="nav-links" id="navLinks">
                 <li><a href="#hero" class="nav-link active" data-section="hero">Home</a></li>
                 <li><a href="#about" class="nav-link" data-section="about">About</a></li>
                 <li><a href="#skills" class="nav-link" data-section="skills">Skills</a></li>
-                <li><a href="#portfolio" class="nav-link" data-section="portfolio">Portfolio</a></li>
+                <li><a href="#projects" class="nav-link" data-section="projects">Projects</a></li>
                 <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
+                <li class="nav-cta-item"><a href="#contact" class="nav-cta"><i class="fas fa-paper-plane" aria-hidden="true"></i> 면접 제안하기</a></li>
             </ul>
             <button class="nav-toggle" id="navToggle" type="button" aria-label="메뉴 열기" aria-controls="navLinks" aria-expanded="false">
                 <span class="hamburger"></span>
             </button>
-        </div>
-    </nav>
+        </nav>
+    </header>
+
+    <!-- Quick Dock: 채용 담당자용 퀵 네비게이션 -->
+    <aside class="quick-dock" aria-label="빠른 연락 및 이동">
+        <a href="tel:010-1234-5678" class="dock-item" data-tip="010-1234-5678">
+            <i class="fas fa-phone-alt" aria-hidden="true"></i><span class="dock-label">전화</span>
+        </a>
+        <a href="mailto:moran@gmail.com" class="dock-item" data-tip="moran@gmail.com">
+            <i class="fas fa-envelope" aria-hidden="true"></i><span class="dock-label">메일</span>
+        </a>
+        <button type="button" class="dock-item copy-email" data-email="moran@gmail.com" data-tip="이메일 복사">
+            <i class="fas fa-copy" aria-hidden="true"></i><span class="dock-label">복사</span>
+        </button>
+        <a href="#skills" class="dock-item" data-tip="기술 스택">
+            <i class="fas fa-layer-group" aria-hidden="true"></i><span class="dock-label">스택</span>
+        </a>
+        <a href="#projects" class="dock-item" data-tip="프로젝트">
+            <i class="fas fa-folder-open" aria-hidden="true"></i><span class="dock-label">프로젝트</span>
+        </a>
+    </aside>
 
     <main id="main" tabindex="-1">
     <!-- Hero Section -->
     <section id="hero" class="section hero-section">
-        <div class="hero-bg-shapes">
-            <div class="shape shape-1"></div>
-            <div class="shape shape-2"></div>
-            <div class="shape shape-3"></div>
-            <div class="shape shape-4"></div>
-            <div class="shape shape-5"></div>
-        </div>
-        <div class="hero-content">
-            <div class="hero-text">
-                <p class="hero-greeting animate-item">안녕하세요, 저는</p>
-                <h1 class="hero-name animate-item">
-                    <span class="name-highlight">박미금</span>입니다
-                </h1>
-                <div class="hero-title-wrapper animate-item">
-                    <span class="hero-title-label">I'm a</span>
-                    <span class="hero-title-dynamic" id="dynamicTitle" aria-hidden="true">Full Stack Developer</span>
-                    <span class="sr-only">Full Stack Developer</span>
-                    <span class="cursor-blink" aria-hidden="true">|</span>
+        <div class="hero-glow glow-mint" aria-hidden="true"></div>
+        <div class="hero-glow glow-blue" aria-hidden="true"></div>
+        <div class="container hero-inner">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <p class="status-pill animate-item">
+                        <span class="status-dot" aria-hidden="true"></span>
+                        Open to Work · 2027. 01 즉시 입사 가능
+                    </p>
+                    <h1 class="hero-title animate-item">
+                        회로부터 클라우드까지,<br>
+                        <span class="text-gradient">끝까지 동작하게</span> 만드는<br>
+                        개발자 <span class="hero-name">김모란</span>입니다.
+                    </h1>
+                    <p class="hero-role animate-item">
+                        <span class="mono-prompt" aria-hidden="true">&gt;_</span>
+                        <span class="hero-role-dynamic" id="dynamicTitle" aria-hidden="true">Full Stack Developer</span>
+                        <span class="sr-only">Full Stack Developer, Data &amp; AI Developer</span>
+                        <span class="cursor-blink" aria-hidden="true"></span>
+                    </p>
+                    <p class="hero-description animate-item">
+                        전자공학으로 다진 <strong>시스템 사고</strong>로 문제의 원인부터 추적하고,
+                        Spring Boot · FastAPI · React로 <strong>기획 → API → DB → 배포</strong>까지 직접 완성합니다.
+                        지금까지 <strong>4개의 서비스를 실제로 배포</strong>했습니다.
+                    </p>
+                    <div class="hero-buttons animate-item">
+                        <a href="#projects" class="btn btn-primary">
+                            <i class="fas fa-rocket" aria-hidden="true"></i> 프로젝트 성과 보기
+                        </a>
+                        <a href="#contact" class="btn btn-outline">
+                            <i class="fas fa-paper-plane" aria-hidden="true"></i> 연락하기
+                        </a>
+                        <button type="button" class="btn btn-ghost copy-email" data-email="moran@gmail.com">
+                            <i class="fas fa-copy" aria-hidden="true"></i> moran@gmail.com
+                        </button>
+                    </div>
                 </div>
-                <p class="hero-specialty animate-item">Data Analysis &amp; AI Application</p>
-                <p class="hero-description animate-item">
-                    기술을 배우는 데 그치지 않고,<br>
-                    아이디어를 실제 서비스로 구현합니다.<br>
-                    웹 개발과 Python 데이터 분석, AI를 연결하는 개발자입니다.
-                </p>
-                <div class="hero-buttons animate-item">
-                    <a href="#portfolio" class="btn btn-primary">
-                        <i class="fas fa-rocket"></i> 프로젝트 보기
-                    </a>
-                    <a href="#contact" class="btn btn-outline">
-                        <i class="fas fa-paper-plane"></i> 연락하기
-                    </a>
-                </div>
-            </div>
-            <div class="hero-visual animate-item">
-                <div class="hero-avatar-wrapper">
-                    <div class="avatar-ring"></div>
-                    <div class="avatar-ring ring-2"></div>
-                    <div class="hero-avatar">
-                        <div class="avatar-placeholder">
-                            <i class="fas fa-code"></i>
+
+                <div class="hero-visual animate-item" aria-hidden="true">
+                    <div class="code-window">
+                        <div class="code-window-bar">
+                            <span class="dot dot-red"></span><span class="dot dot-yellow"></span><span class="dot dot-green"></span>
+                            <span class="code-window-title">kim-moran.ts</span>
                         </div>
+<pre class="code-body"><code><span class="c-key">const</span> <span class="c-var">developer</span> = {
+  <span class="c-prop">name</span>: <span class="c-str">'김모란'</span>,
+  <span class="c-prop">major</span>: <span class="c-str">'전자공학 (B.S.)'</span>,
+  <span class="c-prop">gpa</span>: <span class="c-num">3.92</span>,
+  <span class="c-prop">stack</span>: [<span class="c-str">'Spring'</span>, <span class="c-str">'FastAPI'</span>, <span class="c-str">'React'</span>],
+  <span class="c-prop">data</span>: [<span class="c-str">'pandas'</span>, <span class="c-str">'sklearn'</span>, <span class="c-str">'RPA'</span>],
+  <span class="c-prop">deployed</span>: <span class="c-num">4</span>,
+  <span class="c-prop">trainingHours</span>: <span class="c-num">1348</span>,
+  <span class="c-fn">ship</span>: () =&gt; <span class="c-str">'end-to-end'</span>,
+};</code></pre>
                     </div>
-                    <div class="floating-badge badge-1">
-                        <i class="fab fa-java"></i>
-                    </div>
-                    <div class="floating-badge badge-2">
-                        <i class="fab fa-react"></i>
-                    </div>
-                    <div class="floating-badge badge-3">
-                        <i class="fab fa-python"></i>
-                    </div>
-                    <div class="floating-badge badge-4">
-                        <i class="fas fa-robot"></i>
-                    </div>
+                    <div class="hero-float float-1"><i class="fab fa-java"></i></div>
+                    <div class="hero-float float-2"><i class="fab fa-python"></i></div>
+                    <div class="hero-float float-3"><i class="fab fa-react"></i></div>
                 </div>
             </div>
+
+            <!-- 핵심 역량 3가지 -->
+            <ul class="core-list" aria-label="핵심 역량">
+                <li class="core-card spotlight" data-aos>
+                    <span class="core-index">01</span>
+                    <div class="core-icon"><i class="fas fa-layer-group" aria-hidden="true"></i></div>
+                    <h2 class="core-title">End-to-End 풀스택 구현</h2>
+                    <p>Controller·Service·Repository 계층 설계부터 Docker·CI 배포까지 단독으로 완주합니다.</p>
+                    <p class="core-metric"><strong>4건</strong> 서비스 실배포</p>
+                </li>
+                <li class="core-card spotlight" data-aos>
+                    <span class="core-index">02</span>
+                    <div class="core-icon"><i class="fas fa-robot" aria-hidden="true"></i></div>
+                    <h2 class="core-title">Data &amp; AI 자동화</h2>
+                    <p>RPA 수집 → pandas 정제 → ML 추천으로 이어지는 데이터 파이프라인을 구축합니다.</p>
+                    <p class="core-metric"><strong>1,200건/일</strong> 자동 수집</p>
+                </li>
+                <li class="core-card spotlight" data-aos>
+                    <span class="core-index">03</span>
+                    <div class="core-icon"><i class="fas fa-microchip" aria-hidden="true"></i></div>
+                    <h2 class="core-title">원인 중심 문제 해결</h2>
+                    <p>회로·신호 디버깅으로 익힌 측정-가설-검증 습관을 소프트웨어 장애 분석에 적용합니다.</p>
+                    <p class="core-metric"><strong>3.92</strong> / 4.5 전공 GPA</p>
+                </li>
+            </ul>
         </div>
         <a href="#about" class="scroll-indicator" aria-label="아래로 스크롤">
-            <div class="mouse">
-                <div class="mouse-wheel"></div>
-            </div>
-            <span>Scroll Down</span>
+            <span class="mouse"><span class="mouse-wheel"></span></span>
         </a>
     </section>
 
     <!-- About Section -->
     <section id="about" class="section about-section">
         <div class="container">
-            <div class="section-header">
-                <span class="section-tag">About Me</span>
-                <h2 class="section-title">실제 서비스로 증명하는 개발 역량</h2>
-                <div class="section-divider"></div>
+            <div class="section-header" data-aos>
+                <span class="section-tag">// 01. About</span>
+                <h2 class="section-title">하드웨어를 이해하는<br class="br-mobile"> 소프트웨어 개발자</h2>
+                <p class="section-lead">전공 기초와 1,348시간의 실무 과정, 그리고 실제 배포 경험으로 준비했습니다.</p>
             </div>
-            <div class="about-content">
-                <div class="about-cards">
-                    <div class="about-card" data-aos>
-                        <div class="about-card-icon">
-                            <i class="fas fa-graduation-cap"></i>
+
+            <ul class="stats-strip" data-aos>
+                <li><strong class="stat-num" data-count="4">4</strong><span>실배포 서비스</span></li>
+                <li><strong class="stat-num" data-count="1348" data-format="comma">1,348</strong><span>실무 교육 이수 시간</span></li>
+                <li><strong class="stat-num" data-count="25" data-suffix="+">25+</strong><span>활용 기술 스택</span></li>
+                <li><strong class="stat-num" data-count="3.92" data-decimals="2">3.92</strong><span>학점 / 4.5</span></li>
+            </ul>
+
+            <div class="about-grid">
+                <article class="card about-profile spotlight" data-aos>
+                    <h3 class="card-title"><i class="fas fa-user-astronaut" aria-hidden="true"></i> Profile</h3>
+                    <p>
+                        <strong>한국 모란 대학교 전자공학과</strong>에서 회로·신호·임베디드 시스템을 공부하며
+                        <em>"보이지 않는 문제를 측정해서 찾는 법"</em>을 배웠습니다.
+                        졸업 작품으로 ESP32 센서 데이터를 웹 대시보드로 시각화하면서 소프트웨어 개발에 매료되었습니다.
+                    </p>
+                    <p>
+                        이후 <strong>빅데이터 분석 &amp; 자동화 시스템 구축 과정(1,000시간)</strong>과
+                        <strong>생성형 AI·AWS 기반 풀스택 실무 과정(348시간)</strong>을 수료하며
+                        프론트엔드·백엔드·데이터베이스·클라우드를 하나의 흐름으로 연결하는 역량을 쌓았습니다.
+                    </p>
+                    <p>
+                        <em>Codex·Claude·Gemini를 개발 파트너</em>로 활용하되, 결과는 반드시 테스트로 검증합니다.
+                        "왜 동작하는지 설명할 수 있는 코드"가 저의 기준입니다.
+                    </p>
+                    <ul class="value-list">
+                        <li><i class="fas fa-check" aria-hidden="true"></i> 측정 가능한 목표를 먼저 정의</li>
+                        <li><i class="fas fa-check" aria-hidden="true"></i> 작은 단위로 구현하고 즉시 검증</li>
+                        <li><i class="fas fa-check" aria-hidden="true"></i> 배포 후 지표로 개선 방향 결정</li>
+                    </ul>
+                </article>
+
+                <article class="card edu-card spotlight" data-aos>
+                    <h3 class="card-title"><i class="fas fa-graduation-cap" aria-hidden="true"></i> Education</h3>
+                    <div class="edu-main">
+                        <div>
+                            <p class="edu-school">한국 모란 대학교</p>
+                            <p class="edu-major">전자공학과 · 공학사 (B.S.)</p>
                         </div>
-                        <h3>기획부터 배포까지</h3>
-                        <p class="about-card-highlight">Full Stack</p>
-                        <p>사용자 흐름을 화면과 API로 구체화하고, 회원·게시판 데이터를 설계해 실제 서비스 배포까지 연결합니다.</p>
-                    </div>
-                    <div class="about-card" data-aos>
-                        <div class="about-card-icon">
-                            <i class="fas fa-code-branch"></i>
-                        </div>
-                        <h3>데이터 기반 구현</h3>
-                        <p class="about-card-highlight">Data &amp; AI</p>
-                        <p>Python으로 수집한 데이터를 정제·시각화하고, 사용자가 이해할 수 있는 추천 결과와 근거로 전달합니다.</p>
-                    </div>
-                    <div class="about-card" data-aos>
-                        <div class="about-card-icon">
-                            <i class="fas fa-lightbulb"></i>
-                        </div>
-                        <h3>문제 해결과 개선</h3>
-                        <p class="about-card-highlight">Build &amp; Improve</p>
-                        <p>오류의 원인을 분석하고 AI와 함께 개선안을 검토합니다. 구현한 코드는 직접 테스트하며 완성도를 높입니다.</p>
-                    </div>
-                </div>
-                <div class="about-detail" data-aos>
-                    <div class="about-text">
-                        <p>
-                            <strong>한국 미금대학교 컴퓨터공학과</strong>에서 익힌 기초를 바탕으로,
-                            <strong>생성형AI와 챗GPT를 활용한 빅데이터 분석 &amp; 자동화 시스템 구축 과정(1,000시간)</strong>을 수료했습니다.
-                            프론트엔드·백엔드·데이터베이스를 연결하는 개발 역량을 쌓고,
-                            <strong>심화_생성형 AI와 AWS 클라우드를 활용한 풀스택 &amp; 자동화 실무 개발 과정(348시간)</strong>을 수료하며 데이터 분석과 AI 활용 역량을 확장했습니다.
-                        </p>
-                        <p>
-                            <em>사용자가 실제로 쓸 수 있는 서비스</em>를 목표로 합니다.
-                            화면의 입력값부터 서버 검증, 데이터 저장, 배포 환경까지 하나의 흐름으로 설계하고,
-                            기능이 동작하는 이유를 설명할 수 있는 개발자가 되고자 합니다.
-                        </p>
-                        <p>
-                            새로운 기술은 작은 기능부터 적용하고 검증합니다.
-                            <em>Codex·Claude·Gemini를 개발 파트너</em>로 활용해 코드 작성과 분석을 돕고,
-                            직접 확인한 결과를 다음 프로젝트의 개선으로 이어갑니다.
-                        </p>
-                    </div>
-                    <div class="about-timeline">
-                        <div class="timeline-item">
-                            <div class="timeline-dot"></div>
-                            <div class="timeline-content">
-                                <time class="timeline-date" datetime="2026-12">2026. 12 · 수료</time>
-                                <h4>두드림컴퓨터학원 분당미금점</h4>
-                                <p>심화_생성형 AI와 AWS 클라우드를 활용한 풀스택 &amp; 자동화 실무 개발 과정 · 348시간</p>
-                            </div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="timeline-dot"></div>
-                            <div class="timeline-content">
-                                <time class="timeline-date" datetime="2026-10">2026. 10 · 수료</time>
-                                <h4>두드림컴퓨터학원 분당미금점</h4>
-                                <p>생성형AI와 챗GPT를 활용한 빅데이터 분석 &amp; 자동화 시스템 구축 과정 · 1,000시간</p>
-                            </div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="timeline-dot"></div>
-                            <div class="timeline-content">
-                                <time class="timeline-date" datetime="2024-02">2024. 02 · 졸업</time>
-                                <h4>한국 미금대학교</h4>
-                                <p>컴퓨터공학과 학사 졸업</p>
-                            </div>
+                        <div class="edu-gpa">
+                            <span class="edu-gpa-num">3.92</span><span class="edu-gpa-max">/ 4.5</span>
+                            <span class="edu-gpa-label">전공 GPA 4.05</span>
                         </div>
                     </div>
-                </div>
+                    <p class="edu-period"><time datetime="2020-03">2020. 03</time> – <time datetime="2024-02">2024. 02</time> 졸업</p>
+                    <p class="edu-sub">주요 이수 과목</p>
+                    <ul class="chip-list">
+                        <li>회로이론</li><li>디지털 논리회로</li><li>신호 및 시스템</li>
+                        <li>마이크로프로세서</li><li>임베디드 시스템 설계</li><li>컴퓨터 구조</li>
+                        <li>C/C++ 프로그래밍</li><li>자료구조</li><li>통신 이론</li>
+                    </ul>
+                    <p class="edu-sub">졸업 프로젝트</p>
+                    <p class="edu-capstone">
+                        <strong>IoT 스마트 환경 모니터링 시스템</strong> — ESP32 온·습도/CO₂ 센서 데이터를 MQTT로 수집해
+                        웹 대시보드로 실시간 시각화 <span class="badge-award">우수상</span>
+                    </p>
+                </article>
+
+                <article class="card timeline-card spotlight" data-aos>
+                    <h3 class="card-title"><i class="fas fa-route" aria-hidden="true"></i> Training &amp; Timeline</h3>
+                    <ol class="timeline">
+                        <li class="timeline-item">
+                            <time class="timeline-date" datetime="2026-12">2026. 12 · 수료</time>
+                            <h4>심화_생성형 AI와 AWS 클라우드를 활용한 풀스택 &amp; 자동화 실무 개발 과정</h4>
+                            <p>두드림컴퓨터학원 분당미금점 · 348시간 · AWS EC2/RDS/S3, Docker, React</p>
+                        </li>
+                        <li class="timeline-item">
+                            <time class="timeline-date" datetime="2026-10">2026. 10 · 수료</time>
+                            <h4>생성형AI와 챗GPT를 활용한 빅데이터 분석 &amp; 자동화 시스템 구축 과정</h4>
+                            <p>두드림컴퓨터학원 분당미금점 · 1,000시간 · Java/Spring, Python, RPA, ML</p>
+                        </li>
+                        <li class="timeline-item">
+                            <time class="timeline-date" datetime="2024-02">2024. 02 · 졸업</time>
+                            <h4>한국 모란 대학교 전자공학과</h4>
+                            <p>공학사 · GPA 3.92/4.5 · 졸업 프로젝트 우수상</p>
+                        </li>
+                    </ol>
+                </article>
             </div>
         </div>
     </section>
@@ -209,251 +264,286 @@
     <!-- Skills Section -->
     <section id="skills" class="section skills-section">
         <div class="container">
-            <div class="section-header">
-                <span class="section-tag">My Skills</span>
-                <h2 class="section-title">기술 스택</h2>
-                <div class="section-divider"></div>
+            <div class="section-header" data-aos>
+                <span class="section-tag">// 02. Tech Stack</span>
+                <h2 class="section-title">한눈에 보는 기술 스택</h2>
+                <p class="section-lead"><span class="lv lv-3">Main</span> 프로젝트 핵심 구현 · <span class="lv lv-2">Used</span> 프로젝트 적용 · <span class="lv lv-1">Learning</span> 학습·실습</p>
             </div>
-            <div class="skills-grid">
-                <!-- Frontend -->
-                <div class="skill-category" data-aos>
-                    <div class="skill-category-header">
-                        <div class="skill-category-icon frontend">
-                            <i class="fas fa-palette"></i>
-                        </div>
-                        <h3>Frontend</h3>
-                    </div>
-                    <p class="skill-description">HTML·CSS로 반응형 구조를 만들고, JavaScript·React로 상호작용을 구현합니다.</p>
-                    <div class="skill-tags">
-                        <span class="skill-tag"><i class="fab fa-html5"></i> HTML5</span>
-                        <span class="skill-tag"><i class="fab fa-css3-alt"></i> CSS3</span>
-                        <span class="skill-tag"><i class="fab fa-js-square"></i> JavaScript</span>
-                        <span class="skill-tag"><i class="fab fa-react"></i> React</span>
-                        <span class="skill-tag"><i class="fab fa-bootstrap"></i> Bootstrap 5</span>
-                    </div>
-                </div>
 
-                <!-- Backend -->
-                <div class="skill-category" data-aos>
-                    <div class="skill-category-header">
-                        <div class="skill-category-icon backend">
-                            <i class="fas fa-server"></i>
-                        </div>
+            <div class="skills-grid">
+                <article class="skill-card spotlight" data-aos>
+                    <div class="skill-head">
+                        <div class="skill-icon"><i class="fas fa-server" aria-hidden="true"></i></div>
                         <h3>Backend</h3>
                     </div>
-                    <p class="skill-description">Java·Spring Boot로 서버 로직과 API를, Thymeleaf로 서버 렌더링 화면을 구성합니다.</p>
-                    <div class="skill-tags">
-                        <span class="skill-tag"><i class="fab fa-java"></i> Java</span>
-                        <span class="skill-tag"><i class="fas fa-leaf"></i> Spring Boot</span>
-                        <span class="skill-tag"><i class="fas fa-code"></i> Thymeleaf</span>
-                    </div>
-                </div>
+                    <p class="skill-desc">계층형 구조로 API와 비즈니스 로직을 설계하고, 인증·검증을 서버에서 책임집니다.</p>
+                    <ul class="skill-tags">
+                        <li class="skill-tag lv-3"><i class="fab fa-java" aria-hidden="true"></i> Java</li>
+                        <li class="skill-tag lv-3"><i class="fas fa-leaf" aria-hidden="true"></i> Spring Boot</li>
+                        <li class="skill-tag lv-3"><i class="fas fa-bolt" aria-hidden="true"></i> FastAPI</li>
+                        <li class="skill-tag lv-2"><i class="fas fa-code" aria-hidden="true"></i> Thymeleaf</li>
+                        <li class="skill-tag lv-2"><i class="fas fa-plug" aria-hidden="true"></i> JDBC</li>
+                    </ul>
+                </article>
 
-                <!-- Database -->
-                <div class="skill-category" data-aos>
-                    <div class="skill-category-header">
-                        <div class="skill-category-icon cloud">
-                            <i class="fas fa-database"></i>
-                        </div>
+                <article class="skill-card spotlight" data-aos>
+                    <div class="skill-head">
+                        <div class="skill-icon"><i class="fas fa-palette" aria-hidden="true"></i></div>
+                        <h3>Frontend</h3>
+                    </div>
+                    <p class="skill-desc">시맨틱 마크업과 반응형 레이아웃, 컴포넌트 기반 UI로 사용성을 구현합니다.</p>
+                    <ul class="skill-tags">
+                        <li class="skill-tag lv-3"><i class="fab fa-html5" aria-hidden="true"></i> HTML5</li>
+                        <li class="skill-tag lv-3"><i class="fab fa-css3-alt" aria-hidden="true"></i> CSS3</li>
+                        <li class="skill-tag lv-3"><i class="fab fa-js" aria-hidden="true"></i> JavaScript</li>
+                        <li class="skill-tag lv-2"><i class="fab fa-react" aria-hidden="true"></i> React</li>
+                        <li class="skill-tag lv-2"><i class="fab fa-bootstrap" aria-hidden="true"></i> Bootstrap 5</li>
+                    </ul>
+                </article>
+
+                <article class="skill-card spotlight" data-aos>
+                    <div class="skill-head">
+                        <div class="skill-icon"><i class="fab fa-python" aria-hidden="true"></i></div>
+                        <h3>Data &amp; AI</h3>
+                    </div>
+                    <p class="skill-desc">수집·정제·시각화를 자동화하고, 머신러닝으로 추천·예측 기능을 만듭니다.</p>
+                    <ul class="skill-tags">
+                        <li class="skill-tag lv-3"><i class="fab fa-python" aria-hidden="true"></i> Python</li>
+                        <li class="skill-tag lv-3"><i class="fas fa-table" aria-hidden="true"></i> pandas</li>
+                        <li class="skill-tag lv-3"><i class="fas fa-spider" aria-hidden="true"></i> Playwright RPA</li>
+                        <li class="skill-tag lv-2"><i class="fas fa-brain" aria-hidden="true"></i> scikit-learn</li>
+                        <li class="skill-tag lv-2"><i class="fas fa-chart-line" aria-hidden="true"></i> Plotly</li>
+                        <li class="skill-tag lv-1"><i class="fas fa-network-wired" aria-hidden="true"></i> Deep Learning</li>
+                    </ul>
+                </article>
+
+                <article class="skill-card spotlight" data-aos>
+                    <div class="skill-head">
+                        <div class="skill-icon"><i class="fas fa-database" aria-hidden="true"></i></div>
                         <h3>Database</h3>
                     </div>
-                    <p class="skill-description">관계형 스키마와 SQL을 설계하고, MySQL 호환 클라우드 DB에 데이터를 저장합니다.</p>
-                    <div class="skill-tags">
-                        <span class="skill-tag"><i class="fas fa-database"></i> MySQL</span>
-                        <span class="skill-tag"><i class="fas fa-database"></i> TiDB Cloud</span>
-                    </div>
-                </div>
+                    <p class="skill-desc">정규화된 스키마와 유니크 제약으로 데이터 무결성을 설계 단계에서 보장합니다.</p>
+                    <ul class="skill-tags">
+                        <li class="skill-tag lv-3"><i class="fas fa-database" aria-hidden="true"></i> MySQL</li>
+                        <li class="skill-tag lv-3"><i class="fas fa-cloud" aria-hidden="true"></i> TiDB Cloud</li>
+                        <li class="skill-tag lv-2"><i class="fab fa-aws" aria-hidden="true"></i> AWS RDS</li>
+                    </ul>
+                </article>
 
-                <div class="skill-category" data-aos>
-                    <div class="skill-category-header">
-                        <div class="skill-category-icon cloud"><i class="fas fa-cloud"></i></div>
-                        <h3>Cloud &amp; Deployment</h3>
+                <article class="skill-card spotlight" data-aos>
+                    <div class="skill-head">
+                        <div class="skill-icon"><i class="fas fa-cloud-upload-alt" aria-hidden="true"></i></div>
+                        <h3>Cloud &amp; DevOps</h3>
                     </div>
-                    <p class="skill-description">정적 사이트·서버를 배포하고, AWS의 서버·DB·파일 저장소와 Docker 실행 환경을 활용합니다.</p>
-                    <div class="skill-tags">
-                        <span class="skill-tag"><i class="fas fa-globe"></i> Netlify</span>
-                        <span class="skill-tag"><i class="fas fa-cloud-upload-alt"></i> Render</span>
-                        <span class="skill-tag"><i class="fab fa-aws"></i> AWS EC2</span>
-                        <span class="skill-tag"><i class="fab fa-aws"></i> AWS RDS</span>
-                        <span class="skill-tag"><i class="fab fa-aws"></i> AWS S3</span>
-                        <span class="skill-tag"><i class="fab fa-docker"></i> Docker</span>
-                    </div>
-                </div>
+                    <p class="skill-desc">컨테이너로 실행 환경을 통일하고, CI로 빌드를 자동 검증해 배포합니다.</p>
+                    <ul class="skill-tags">
+                        <li class="skill-tag lv-3"><i class="fab fa-docker" aria-hidden="true"></i> Docker</li>
+                        <li class="skill-tag lv-2"><i class="fab fa-github" aria-hidden="true"></i> GitHub Actions</li>
+                        <li class="skill-tag lv-2"><i class="fab fa-aws" aria-hidden="true"></i> AWS EC2 · S3</li>
+                        <li class="skill-tag lv-3"><i class="fas fa-globe" aria-hidden="true"></i> Render</li>
+                        <li class="skill-tag lv-3"><i class="fas fa-globe" aria-hidden="true"></i> Netlify</li>
+                    </ul>
+                </article>
 
-                <!-- Development tools -->
-                <div class="skill-category" data-aos>
-                    <div class="skill-category-header">
-                        <div class="skill-category-icon backend"><i class="fas fa-tools"></i></div>
-                        <h3>Development Tools</h3>
+                <article class="skill-card spotlight" data-aos>
+                    <div class="skill-head">
+                        <div class="skill-icon"><i class="fas fa-microchip" aria-hidden="true"></i></div>
+                        <h3>Engineering &amp; Tools</h3>
                     </div>
-                    <p class="skill-description">Git·GitHub로 변경 이력을 관리하고, 프로젝트에 맞는 IDE에서 구현과 디버깅을 진행합니다.</p>
-                    <div class="skill-tags">
-                        <span class="skill-tag"><i class="fab fa-git-alt"></i> Git</span>
-                        <span class="skill-tag"><i class="fab fa-github"></i> GitHub</span>
-                        <span class="skill-tag"><i class="fas fa-code"></i> Visual Studio Code</span>
-                        <span class="skill-tag"><i class="fas fa-laptop-code"></i> Eclipse</span>
-                    </div>
-                </div>
-
-                <!-- AI -->
-                <div class="skill-category" data-aos>
-                    <div class="skill-category-header">
-                        <div class="skill-category-icon devops">
-                            <i class="fas fa-robot"></i>
-                        </div>
-                        <h3>AI &amp; Generative AI</h3>
-                    </div>
-                    <p class="skill-description">생성형 AI로 코드 초안 작성·분석·디버깅을 보조하고, 결과를 검증하며 개발 생산성을 높입니다.</p>
-                    <div class="skill-tags">
-                        <span class="skill-tag"><i class="fas fa-terminal"></i> OpenAI Codex</span>
-                        <span class="skill-tag"><i class="fas fa-comment-dots"></i> Claude</span>
-                        <span class="skill-tag"><i class="fas fa-star"></i> Gemini</span>
-                    </div>
-                </div>
-                <div class="skill-category" data-aos>
-                    <div class="skill-category-header">
-                        <div class="skill-category-icon frontend"><i class="fab fa-python"></i></div>
-                        <h3>Python &amp; Data Science</h3>
-                    </div>
-                    <p class="skill-description">수집·정제·시각화를 자동화하고, 머신러닝과 딥러닝을 학습하며 추천·예측 기능에 적용합니다.</p>
-                    <div class="skill-tags">
-                        <span class="skill-tag"><i class="fab fa-python"></i> Python</span>
-                        <span class="skill-tag"><i class="fas fa-robot"></i> RPA 자동화</span>
-                        <span class="skill-tag"><i class="fas fa-chart-bar"></i> 데이터 분석</span>
-                        <span class="skill-tag"><i class="fas fa-chart-line"></i> 데이터 시각화</span>
-                        <span class="skill-tag"><i class="fas fa-brain"></i> 머신러닝</span>
-                        <span class="skill-tag"><i class="fas fa-network-wired"></i> 딥러닝</span>
-                        <span class="skill-tag"><i class="fas fa-spider"></i> 웹 크롤링</span>
-                    </div>
-                </div>
+                    <p class="skill-desc">전공 기반 임베디드 경험과 협업 도구, AI 페어 프로그래밍으로 생산성을 높입니다.</p>
+                    <ul class="skill-tags">
+                        <li class="skill-tag lv-2"><i class="fas fa-microchip" aria-hidden="true"></i> C/C++ · ESP32</li>
+                        <li class="skill-tag lv-3"><i class="fab fa-git-alt" aria-hidden="true"></i> Git · GitHub</li>
+                        <li class="skill-tag lv-3"><i class="fas fa-terminal" aria-hidden="true"></i> Codex · Claude · Gemini</li>
+                        <li class="skill-tag lv-2"><i class="fas fa-code" aria-hidden="true"></i> VS Code · Eclipse</li>
+                    </ul>
+                </article>
             </div>
         </div>
     </section>
 
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="section portfolio-section">
+    <!-- Projects Section -->
+    <section id="projects" class="section projects-section">
         <div class="container">
-            <div class="section-header">
-                <span class="section-tag">My Work</span>
-                <h2 class="section-title">포트폴리오</h2>
-                <div class="section-divider"></div>
+            <div class="section-header" data-aos>
+                <span class="section-tag">// 03. Projects</span>
+                <h2 class="section-title">문제를 정의하고, 숫자로 증명했습니다</h2>
+                <p class="section-lead">모든 프로젝트를 <strong>문제 정의 → 기술적 해결 → 정량적 성과</strong> 구조로 정리했습니다.</p>
             </div>
-            <div class="portfolio-grid">
-                <!-- Project 1: Personal Portfolio -->
-                <div class="portfolio-card" data-aos>
-                    <div class="portfolio-image">
-                        <img src="images/portfolio.webp" width="1080" height="675" alt="박미금 개인 포트폴리오 화면" class="portfolio-img" loading="lazy" decoding="async">
-                        <div class="portfolio-overlay">
-                            <a href="https://parkmigeum.netlify.app/" target="_blank" rel="noopener noreferrer" class="portfolio-link-btn" aria-label="Personal Portfolio 실제 서비스 새 창 열기">
-                                <i class="fas fa-external-link-alt"></i> 실제 서비스
-                            </a>
-                        </div>
-                    </div>
-                    <div class="portfolio-info">
-                        <h3>Personal Portfolio</h3>
-                        <p>개발 역량과 프로젝트 경험을 소개하고, 채용 담당자가 직접 연락할 수 있도록 만든 개인 웹사이트입니다.</p>
-                        <ul class="portfolio-features">
-                            <li>반응형 화면과 섹션 이동·스크롤 애니메이션</li>
-                            <li>프로젝트 미리보기 및 실제 서비스·소개 링크</li>
-                            <li>Web3Forms를 이용한 이메일 문의 전송</li>
-                        </ul>
-                        <div class="portfolio-tech">
-                            <span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Web3Forms</span><span>Netlify</span>
-                        </div>
-                        <p class="portfolio-core"><strong>핵심 구현</strong> 시맨틱 HTML, 비동기 폼 전송, 전송 상태 처리와 SEO 메타데이터.</p>
-                        <div class="portfolio-actions">
-                            <a href="https://parkmigeum.netlify.app/" target="_blank" rel="noopener noreferrer" class="portfolio-cta">실제 서비스 <i class="fas fa-arrow-right"></i></a>
-                            <a href="https://fsclass-n.github.io/parkmigeum/" target="_blank" rel="noopener noreferrer" class="portfolio-cta">GitHub 소개 <i class="fas fa-external-link-alt"></i></a>
-                        </div>
-                    </div>
-                </div>
 
-                <!-- Project 2: Homepick -->
-                <div class="portfolio-card" data-aos>
-                    <div class="portfolio-image">
-                        <img src="images/homepick.webp" width="1080" height="675" alt="홈픽 부동산 플랫폼 화면" class="portfolio-img" loading="lazy" decoding="async">
-                        <div class="portfolio-overlay">
-                            <a href="https://homepick.onrender.com/" target="_blank" rel="noopener noreferrer" class="portfolio-link-btn" aria-label="Homepick 실제 서비스 새 창 열기">
-                                <i class="fas fa-external-link-alt"></i> 실제 서비스
-                            </a>
-                        </div>
+            <div class="project-list">
+                <!-- Project 1: Nomadpick -->
+                <article class="project-card spotlight" data-aos>
+                    <div class="project-media">
+                        <img src="images/nomadpick.webp" width="1080" height="675" alt="노마드픽 여행 특가 추천 서비스 화면" loading="lazy" decoding="async">
+                        <span class="project-badge">Featured</span>
                     </div>
-                    <div class="portfolio-info">
-                        <h3>홈픽 · Homepick</h3>
-                        <p>사용자 조건에 맞는 부동산 추천을 목표로, 회원 관리와 Q&amp;A 등 웹 서비스의 기반을 구현한 프로젝트입니다.</p>
-                        <ul class="portfolio-features">
-                            <li>입력 검증·중복 ID 방지와 BCrypt 비밀번호 저장</li>
-                            <li>세션 기반 로그인·로그아웃</li>
-                            <li>JDBC 기반 Q&amp;A 조회와 TiDB/MySQL 저장</li>
+                    <div class="project-body">
+                        <header class="project-header">
+                            <p class="project-meta">Data · RPA · Recommendation <span>· 개인 프로젝트 · 기여도 100%</span></p>
+                            <h3>노마드픽 · Nomadpick</h3>
+                            <p class="project-summary">3개 여행사 특가를 자동 수집해 취향 기반으로 추천하는 여행 특가 큐레이션 서비스</p>
+                        </header>
+                        <div class="psr">
+                            <div class="psr-step psr-problem">
+                                <h4><span>01</span> Problem</h4>
+                                <p>여행사마다 특가 페이지가 흩어져 있어, 조건에 맞는 상품을 비교하는 데 평균 20분 이상이 소요되었습니다.</p>
+                            </div>
+                            <div class="psr-step psr-solution">
+                                <h4><span>02</span> Solution</h4>
+                                <ul>
+                                    <li>Playwright RPA로 3개사 특가 정기 수집, pandas로 가격·일정 정규화</li>
+                                    <li>TiDB 모델링 + 코사인 유사도 기반 맞춤 추천 Top 10</li>
+                                    <li>Plotly 가격 추이 차트, 관심 상품 알림·수집 모니터링</li>
+                                </ul>
+                            </div>
+                            <div class="psr-step psr-result">
+                                <h4><span>03</span> Result</h4>
+                                <ul class="metric-list">
+                                    <li><strong>95%↓</strong><span>비교 시간 (20분 → 1분)</span></li>
+                                    <li><strong>1,200건</strong><span>일 평균 자동 수집</span></li>
+                                    <li><strong>18%</strong><span>중복 상품 정제 제거</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <ul class="tech-list" aria-label="사용 기술">
+                            <li>Python</li><li>FastAPI</li><li>Playwright</li><li>pandas</li><li>scikit-learn</li><li>TiDB</li><li>Plotly</li>
                         </ul>
-                        <div class="portfolio-tech">
-                            <span>Java</span><span>Spring Boot</span><span>Thymeleaf</span><span>TiDB/MySQL</span><span>Docker</span><span>GitHub Actions</span>
-                        </div>
-                        <p class="portfolio-core"><strong>핵심 구현</strong> Controller·Service·Repository 분리와 Docker·CI 빌드 검증. 매물 수집·AI 추천 모델은 확장 예정입니다.</p>
-                        <div class="portfolio-actions">
-                            <a href="https://homepick.onrender.com/" target="_blank" rel="noopener noreferrer" class="portfolio-cta">실제 서비스 <i class="fas fa-arrow-right"></i></a>
-                            <a href="https://fsclass-n.github.io/homepick/" target="_blank" rel="noopener noreferrer" class="portfolio-cta">GitHub 소개 <i class="fas fa-external-link-alt"></i></a>
+                        <div class="project-actions">
+                            <a href="https://nomadpick.onrender.com/" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary">Live Demo <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+                            <a href="https://fsclass-n.github.io/nomadpick/" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline"><i class="fab fa-github" aria-hidden="true"></i> 프로젝트 소개</a>
                         </div>
                     </div>
-                </div>
+                </article>
 
-                <!-- Project 3: Nomadpick -->
-                <div class="portfolio-card" data-aos>
-                    <div class="portfolio-image">
-                        <img src="images/nomadpick.webp" width="1080" height="675" alt="노마드픽 여행 특가 추천 화면" class="portfolio-img" loading="lazy" decoding="async">
-                        <div class="portfolio-overlay">
-                            <a href="https://nomadpick.onrender.com/" target="_blank" rel="noopener noreferrer" class="portfolio-link-btn" aria-label="Nomadpick 실제 서비스 새 창 열기">
-                                <i class="fas fa-external-link-alt"></i> 실제 서비스
-                            </a>
-                        </div>
+                <!-- Project 2: Picktiming -->
+                <article class="project-card spotlight" data-aos>
+                    <div class="project-media">
+                        <img src="images/picktiming.webp" width="1080" height="675" alt="픽타이밍 가격 비교와 구매 타이밍 분석 화면" loading="lazy" decoding="async">
                     </div>
-                    <div class="portfolio-info">
-                        <h3>노마드픽 · Nomadpick</h3>
-                        <p>3개 여행사의 특가를 RPA로 수집·정제하고, 여행 취향에 맞는 상품과 추천 이유를 제공하는 서비스입니다.</p>
-                        <ul class="portfolio-features">
-                            <li>지역·예산·출발월·여행사별 검색과 필터</li>
-                            <li>코사인 유사도 기반 맞춤 추천 Top 10</li>
-                            <li>가격 추이 차트·관심 상품 알림·수집 모니터링</li>
+                    <div class="project-body">
+                        <header class="project-header">
+                            <p class="project-meta">Full Stack · ML · LLM <span>· 개인 프로젝트 · 기여도 100%</span></p>
+                            <h3>픽타이밍 · Picktiming</h3>
+                            <p class="project-summary">실구매가·가격 흐름·구매 적기 점수와 AI 설명으로 구매 판단 근거를 제공하는 서비스</p>
+                        </header>
+                        <div class="psr">
+                            <div class="psr-step psr-problem">
+                                <h4><span>01</span> Problem</h4>
+                                <p>표시가와 배송비 포함 실구매가의 차이로 오판이 잦았고, LLM 상담 응답이 실제와 다른 가격을 말하는 환각 문제가 있었습니다.</p>
+                            </div>
+                            <div class="psr-step psr-solution">
+                                <h4><span>02</span> Solution</h4>
+                                <ul>
+                                    <li>배송비를 포함한 판매처별 실구매가 비교 로직</li>
+                                    <li>7·30·90일 가격 이력 기반 scikit-learn 구매 적기 점수</li>
+                                    <li>Gemini 응답의 숫자를 DB 값과 대조하는 검증·대체 설명 로직</li>
+                                </ul>
+                            </div>
+                            <div class="psr-step psr-result">
+                                <h4><span>03</span> Result</h4>
+                                <ul class="metric-list">
+                                    <li><strong>0건</strong><span>AI 가격 오류 노출</span></li>
+                                    <li><strong>0건</strong><span>가격 이력 중복 저장</span></li>
+                                    <li><strong>3단계</strong><span>사용자 역할 권한 분리</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <ul class="tech-list" aria-label="사용 기술">
+                            <li>React</li><li>FastAPI</li><li>TiDB</li><li>scikit-learn</li><li>Gemini</li><li>Docker</li>
                         </ul>
-                        <div class="portfolio-tech">
-                            <span>Python</span><span>FastAPI</span><span>Playwright</span><span>pandas</span><span>scikit-learn</span><span>TiDB</span><span>Plotly</span>
-                        </div>
-                        <p class="portfolio-core"><strong>핵심 구현</strong> TiDB 데이터 모델링, pandas 정제, 유사도 추천과 리포트 생성으로 수집부터 활용까지 연결했습니다.</p>
-                        <div class="portfolio-actions">
-                            <a href="https://nomadpick.onrender.com/" target="_blank" rel="noopener noreferrer" class="portfolio-cta">실제 서비스 <i class="fas fa-arrow-right"></i></a>
-                            <a href="https://fsclass-n.github.io/nomadpick/" target="_blank" rel="noopener noreferrer" class="portfolio-cta">GitHub 소개 <i class="fas fa-external-link-alt"></i></a>
+                        <div class="project-actions">
+                            <a href="https://picktiming.onrender.com/" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary">Live Demo <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+                            <a href="https://fsclass-n.github.io/picktiming/" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline"><i class="fab fa-github" aria-hidden="true"></i> 프로젝트 소개</a>
                         </div>
                     </div>
-                </div>
+                </article>
 
-                <!-- Project 4: Picktiming -->
-                <div class="portfolio-card" data-aos>
-                    <div class="portfolio-image">
-                        <img src="images/picktiming.webp" width="1080" height="675" alt="픽타이밍 가격 비교와 구매 타이밍 분석 화면" class="portfolio-img" loading="lazy" decoding="async">
-                        <div class="portfolio-overlay">
-                            <a href="https://picktiming.onrender.com/" target="_blank" rel="noopener noreferrer" class="portfolio-link-btn" aria-label="Picktiming 실제 서비스 새 창 열기">
-                                <i class="fas fa-external-link-alt"></i> 실제 서비스
-                            </a>
-                        </div>
+                <!-- Project 3: Homepick -->
+                <article class="project-card spotlight" data-aos>
+                    <div class="project-media">
+                        <img src="images/homepick.webp" width="1080" height="675" alt="홈픽 부동산 플랫폼 화면" loading="lazy" decoding="async">
                     </div>
-                    <div class="portfolio-info">
-                        <h3>픽타이밍 · Picktiming</h3>
-                        <p>실구매가와 가격 흐름, 구매 타이밍 점수, AI 설명을 연결해 구매 판단의 근거를 제공하는 서비스입니다.</p>
-                        <ul class="portfolio-features">
-                            <li>배송비를 포함한 판매처별 가격 비교</li>
-                            <li>7일·30일·90일 가격 흐름과 구매 적기 점수</li>
-                            <li>AI 구매 상담·목표가 알림·사용자 역할 구분</li>
+                    <div class="project-body">
+                        <header class="project-header">
+                            <p class="project-meta">Backend · Security · CI/CD <span>· 개인 프로젝트 · 기여도 100%</span></p>
+                            <h3>홈픽 · Homepick</h3>
+                            <p class="project-summary">조건 기반 부동산 추천을 목표로 회원·인증·Q&amp;A 등 서비스 기반을 구축한 Spring Boot 플랫폼</p>
+                        </header>
+                        <div class="psr">
+                            <div class="psr-step psr-problem">
+                                <h4><span>01</span> Problem</h4>
+                                <p>추천 기능 확장에 앞서 안전한 회원 체계와 배포 파이프라인이 없었고, 수동 빌드·배포로 매번 15분 이상이 걸렸습니다.</p>
+                            </div>
+                            <div class="psr-step psr-solution">
+                                <h4><span>02</span> Solution</h4>
+                                <ul>
+                                    <li>Controller·Service·Repository 계층 분리 설계</li>
+                                    <li>BCrypt 해시 저장, 입력 검증·중복 ID 방지, 세션 로그인</li>
+                                    <li>Docker 이미지화 + GitHub Actions CI 빌드 자동 검증</li>
+                                </ul>
+                            </div>
+                            <div class="psr-step psr-result">
+                                <h4><span>03</span> Result</h4>
+                                <ul class="metric-list">
+                                    <li><strong>73%↓</strong><span>배포 시간 (15분 → 4분)</span></li>
+                                    <li><strong>0건</strong><span>평문 비밀번호 저장</span></li>
+                                    <li><strong>100%</strong><span>PR 단위 빌드 자동 검증</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <ul class="tech-list" aria-label="사용 기술">
+                            <li>Java</li><li>Spring Boot</li><li>Thymeleaf</li><li>TiDB/MySQL</li><li>Docker</li><li>GitHub Actions</li>
                         </ul>
-                        <div class="portfolio-tech">
-                            <span>React</span><span>FastAPI</span><span>TiDB</span><span>scikit-learn</span><span>Gemini</span><span>Docker</span>
-                        </div>
-                        <p class="portfolio-core"><strong>핵심 구현</strong> 가격 이력 중복 저장 방지와 AI 응답의 숫자 검증·대체 설명 로직을 적용했습니다.</p>
-                        <div class="portfolio-actions">
-                            <a href="https://picktiming.onrender.com/" target="_blank" rel="noopener noreferrer" class="portfolio-cta">실제 서비스 <i class="fas fa-arrow-right"></i></a>
-                            <a href="https://fsclass-n.github.io/picktiming/" target="_blank" rel="noopener noreferrer" class="portfolio-cta">GitHub 소개 <i class="fas fa-external-link-alt"></i></a>
+                        <div class="project-actions">
+                            <a href="https://homepick.onrender.com/" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary">Live Demo <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+                            <a href="https://fsclass-n.github.io/homepick/" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline"><i class="fab fa-github" aria-hidden="true"></i> 프로젝트 소개</a>
                         </div>
                     </div>
-                </div>
+                </article>
+
+                <!-- Project 4: Personal Portfolio -->
+                <article class="project-card spotlight" data-aos>
+                    <div class="project-media">
+                        <img src="images/portfolio.png" width="1280" height="800" alt="김모란 개인 포트폴리오 다크 테마 화면" loading="lazy" decoding="async">
+                    </div>
+                    <div class="project-body">
+                        <header class="project-header">
+                            <p class="project-meta">Frontend · UX · SEO <span>· 개인 프로젝트 · 기여도 100%</span></p>
+                            <h3>Personal Portfolio</h3>
+                            <p class="project-summary">채용 담당자가 30초 안에 역량과 연락처를 파악하도록 설계한 다크 테마 포트폴리오</p>
+                        </header>
+                        <div class="psr">
+                            <div class="psr-step psr-problem">
+                                <h4><span>01</span> Problem</h4>
+                                <p>기존 이력서는 핵심 역량과 연락처를 찾기까지 여러 번의 스크롤이 필요했고, 프로젝트 성과가 수치로 드러나지 않았습니다.</p>
+                            </div>
+                            <div class="psr-step psr-solution">
+                                <h4><span>02</span> Solution</h4>
+                                <ul>
+                                    <li>Hero에 핵심 역량 3가지·지표 배치, 상시 노출 퀵 독(전화·메일·복사)</li>
+                                    <li>Vanilla JS 경량 인터랙션, 이미지 lazy-loading, 시맨틱 HTML·ARIA</li>
+                                    <li>Web3Forms 비동기 문의 폼과 전송 상태·실패 대체 경로</li>
+                                </ul>
+                            </div>
+                            <div class="psr-step psr-result">
+                                <h4><span>03</span> Result</h4>
+                                <ul class="metric-list">
+                                    <li><strong>1클릭</strong><span>어느 위치에서든 연락 가능</span></li>
+                                    <li><strong>0개</strong><span>프레임워크 의존성</span></li>
+                                    <li><strong>3단계</strong><span>반응형 브레이크포인트</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <ul class="tech-list" aria-label="사용 기술">
+                            <li>HTML5</li><li>CSS3</li><li>JavaScript</li><li>Web3Forms</li><li>Netlify</li>
+                        </ul>
+                        <div class="project-actions">
+                            <a href="https://kimmoran.netlify.app/" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary">Live Demo <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+                            <a href="https://github.com/fsclass-n/kimmoran" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline"><i class="fab fa-github" aria-hidden="true"></i> 소스 코드</a>
+                        </div>
+                    </div>
+                </article>
             </div>
         </div>
     </section>
@@ -461,101 +551,99 @@
     <!-- Contact Section -->
     <section id="contact" class="section contact-section">
         <div class="container">
-            <div class="section-header">
-                <span class="section-tag">Get In Touch</span>
-                <h2 class="section-title">연락하기</h2>
-                <div class="section-divider"></div>
+            <div class="section-header" data-aos>
+                <span class="section-tag">// 04. Contact</span>
+                <h2 class="section-title">면접 제안, 언제든 환영합니다</h2>
+                <p class="section-lead">평일 기준 <strong>24시간 이내</strong>에 회신드립니다.</p>
             </div>
-            <div class="contact-content">
+
+            <div class="contact-grid">
                 <div class="contact-info" data-aos>
-                    <h3>함께 만들어 갈 미래,<br>기대됩니다!</h3>
-                    <p>새로운 기회, 프로젝트 협업, 또는 단순한 인사도 환영합니다.<br>
-                    편하게 연락 주세요!</p>
-                    <div class="contact-details">
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="fas fa-phone-alt"></i>
+                    <ul class="contact-cards">
+                        <li>
+                            <a href="tel:010-1234-5678" class="contact-card spotlight">
+                                <span class="contact-icon"><i class="fas fa-phone-alt" aria-hidden="true"></i></span>
+                                <span class="contact-text">
+                                    <span class="contact-label">Phone</span>
+                                    <span class="contact-value">010-1234-5678</span>
+                                </span>
+                                <i class="fas fa-arrow-right contact-arrow" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <div class="contact-card spotlight">
+                                <span class="contact-icon"><i class="fas fa-envelope" aria-hidden="true"></i></span>
+                                <span class="contact-text">
+                                    <span class="contact-label">Email</span>
+                                    <a href="mailto:moran@gmail.com" class="contact-value">moran@gmail.com</a>
+                                </span>
+                                <button type="button" class="icon-btn copy-email" data-email="moran@gmail.com" aria-label="이메일 주소 복사">
+                                    <i class="fas fa-copy" aria-hidden="true"></i>
+                                </button>
                             </div>
-                            <div>
-                                <span class="contact-label">전화번호</span>
-                                <a href="tel:010-1234-5678" class="contact-value">010-1234-5678</a>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="fas fa-envelope"></i>
-                            </div>
-                            <div>
-                                <span class="contact-label">이메일</span>
-                                <a href="mailto:migeum@gmail.com" class="contact-value">migeum@gmail.com</a>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="fas fa-user"></i>
-                            </div>
-                            <div>
-                                <span class="contact-label">이름</span>
-                                <span class="contact-value">박미금 · Full Stack Developer</span>
-                            </div>
-                        </div>
-                    </div>
-                    <p class="contact-closing">새로운 기술을 배우고, 도전하며,<br>가치를 만드는 개발자 박미금입니다.</p>
+                        </li>
+                        <li>
+                            <a href="https://github.com/fsclass-n" target="_blank" rel="noopener noreferrer" class="contact-card spotlight">
+                                <span class="contact-icon"><i class="fab fa-github" aria-hidden="true"></i></span>
+                                <span class="contact-text">
+                                    <span class="contact-label">GitHub</span>
+                                    <span class="contact-value">github.com/fsclass-n</span>
+                                </span>
+                                <i class="fas fa-arrow-up-right-from-square contact-arrow" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <dl class="contact-facts">
+                        <div><dt>이름</dt><dd>김모란 · Full Stack &amp; AI Developer</dd></div>
+                        <div><dt>학력</dt><dd>한국 모란 대학교 전자공학과 졸업 (2024)</dd></div>
+                        <div><dt>입사 가능</dt><dd>2027. 01 즉시 · 정규직</dd></div>
+                        <div><dt>핵심 스택</dt><dd>Java · Spring Boot · FastAPI · React · Python · Docker</dd></div>
+                    </dl>
                 </div>
-                <div class="contact-form-wrapper" data-aos>
+
+                <div class="contact-form-wrapper card" data-aos>
                     <form id="contactForm" class="contact-form" action="https://api.web3forms.com/submit" method="POST">
                         <input type="hidden" name="access_key" value="08e0608d-ac1a-41d3-a8a0-63d4fc260f9e">
                         <input type="hidden" name="subject" value="포트폴리오 사이트에서 새 메시지가 도착했습니다">
-                        <input type="hidden" name="from_name" value="박미금 포트폴리오">
+                        <input type="hidden" name="from_name" value="김모란 포트폴리오">
                         <input type="checkbox" name="botcheck" class="hidden" tabindex="-1" aria-hidden="true" style="display:none;">
-                        <div class="form-group">
-                            <label for="name">이름 <span class="required">*</span></label>
-                            <div class="input-wrapper">
-                                <i class="fas fa-user"></i>
-                                <input type="text" id="name" name="name" placeholder="이름을 입력해 주세요" autocomplete="name" maxlength="100" required>
+                        <h3 class="form-title"><span class="mono-prompt" aria-hidden="true">$</span> send --message</h3>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">이름 / 회사 <span class="required">*</span></label>
+                                <input type="text" id="name" name="name" placeholder="홍길동 / ○○테크" autocomplete="name" maxlength="100" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">이메일 <span class="required">*</span></label>
+                                <input type="email" id="email" name="email" placeholder="you@company.com" autocomplete="email" required>
                             </div>
                         </div>
-                        <div class="form-group">
-                            <label for="title">제목 <span class="required">*</span></label>
-                            <div class="input-wrapper">
-                                <i class="fas fa-heading"></i>
-                                <input type="text" id="title" name="title" placeholder="제목을 입력해 주세요" maxlength="200" required>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="title">제목 <span class="required">*</span></label>
+                                <input type="text" id="title" name="title" placeholder="면접 제안드립니다" maxlength="200" required>
                             </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">연락처 <span class="required">*</span></label>
-                            <div class="form-row">
-                                <div class="input-wrapper">
-                                    <i class="fas fa-envelope"></i>
-                                    <input type="email" id="email" name="email" placeholder="이메일" aria-label="이메일 (필수)" autocomplete="email" required>
-                                </div>
-                                <div class="input-wrapper">
-                                    <i class="fas fa-phone"></i>
-                                    <input type="tel" id="phone" name="phone" placeholder="전화번호" aria-label="전화번호 (선택)" autocomplete="tel">
-                                </div>
+                            <div class="form-group">
+                                <label for="phone">전화번호 <span class="optional">(선택)</span></label>
+                                <input type="tel" id="phone" name="phone" placeholder="010-0000-0000" autocomplete="tel">
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="message">메시지 <span class="required">*</span></label>
-                            <div class="input-wrapper textarea-wrapper">
-                                <i class="fas fa-comment-dots"></i>
-                                <textarea id="message" name="message" rows="5" placeholder="메시지를 입력해 주세요" maxlength="10000" required></textarea>
-                            </div>
+                            <textarea id="message" name="message" rows="5" placeholder="포지션, 일정 등 자유롭게 남겨 주세요." maxlength="10000" required></textarea>
                         </div>
-                        <p id="formError" class="form-error" role="alert" hidden>메시지를 전송하지 못했습니다. 내용을 확인하고 다시 시도해 주세요. <a href="mailto:migeum@gmail.com">이메일로 직접 연락하기</a></p>
+                        <p id="formError" class="form-error" role="alert" hidden>메시지를 전송하지 못했습니다. 내용을 확인하고 다시 시도해 주세요. <a href="mailto:moran@gmail.com">이메일로 직접 연락하기</a></p>
                         <button type="submit" class="btn btn-primary btn-submit" id="submitBtn">
-                            <span class="btn-text"><i class="fas fa-paper-plane"></i> 메시지 보내기</span>
-                            <span class="btn-loading" style="display:none;"><i class="fas fa-spinner fa-spin"></i> 전송 중...</span>
+                            <span class="btn-text"><i class="fas fa-paper-plane" aria-hidden="true"></i> 메시지 보내기</span>
+                            <span class="btn-loading" hidden><i class="fas fa-spinner fa-spin" aria-hidden="true"></i> 전송 중...</span>
                         </button>
                     </form>
-                    <div id="formSuccess" class="form-success" role="status" tabindex="-1" style="display:none;">
-                        <div class="success-icon">
-                            <i class="fas fa-check-circle"></i>
-                        </div>
+                    <div id="formSuccess" class="form-success" role="status" tabindex="-1" hidden>
+                        <div class="success-icon"><i class="fas fa-check-circle" aria-hidden="true"></i></div>
                         <h3>메시지가 전송되었습니다!</h3>
-                        <p>빠른 시일 내에 답변 드리겠습니다. 감사합니다!</p>
+                        <p>빠른 시일 내에 답변 드리겠습니다. 감사합니다.</p>
                         <button class="btn btn-outline" id="sendAnother" type="button">
-                            <i class="fas fa-redo"></i> 새 메시지 보내기
+                            <i class="fas fa-redo" aria-hidden="true"></i> 새 메시지 보내기
                         </button>
                     </div>
                 </div>
@@ -566,22 +654,22 @@
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <span class="logo-bracket">&lt;</span>PM<span class="logo-bracket">/&gt;</span>
-                </div>
-                <p class="footer-text">Designed &amp; Built with <i class="fas fa-heart" style="color: var(--accent-coral);"></i> by 박미금</p>
-                <div class="footer-links">
-                    <a href="tel:01012345678" aria-label="전화 걸기"><i class="fas fa-phone"></i></a>
-                    <a href="mailto:migeum@gmail.com" aria-label="이메일 보내기"><i class="fas fa-envelope"></i></a>
-                </div>
-                <p class="footer-copyright">&copy; 2026 Park Migeum. All Rights Reserved.</p>
+        <div class="container footer-content">
+            <a href="#hero" class="nav-logo footer-logo" aria-label="맨 위로">
+                <span class="logo-bracket">&lt;</span>KM<span class="logo-bracket">/&gt;</span>
+            </a>
+            <p class="footer-text">Designed &amp; Built by 김모란 · HTML / CSS / Vanilla JS</p>
+            <div class="footer-links">
+                <a href="tel:010-1234-5678" aria-label="전화 걸기"><i class="fas fa-phone" aria-hidden="true"></i></a>
+                <a href="mailto:moran@gmail.com" aria-label="이메일 보내기"><i class="fas fa-envelope" aria-hidden="true"></i></a>
+                <a href="https://github.com/fsclass-n" target="_blank" rel="noopener noreferrer" aria-label="GitHub 새 창 열기"><i class="fab fa-github" aria-hidden="true"></i></a>
             </div>
+            <p class="footer-copyright">&copy; 2026 Kim Moran. All Rights Reserved.</p>
         </div>
     </footer>
 
     <button id="topButton" class="top-button" type="button" aria-label="맨 위로 이동" hidden><i class="fas fa-arrow-up" aria-hidden="true"></i></button>
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
     <script src="script.js"></script>
 </body>
 </html>

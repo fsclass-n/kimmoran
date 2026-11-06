@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://parkmigeum.netlify.app/sitemap.xml
+Sitemap: https://kimmoran.netlify.app/sitemap.xml
